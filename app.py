@@ -13,7 +13,7 @@ st.title("🌉 KSFO Live Edge Terminal")
 def load_historical():
     try:
         # Looking in your data folder
-        df = pd.read_csv("data/ksfo_historical.csv", parse_dates=['date'])
+        df = pd.read_csv("Data/ksfo_historical.csv", parse_dates=['date'])
         return df
     except Exception as e:
         st.error(f"⚠️ CSV Error: Make sure your file is at 'data/ksfo_historical.csv'. Details: {e}")
