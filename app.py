@@ -16,7 +16,7 @@ def load_historical():
         df = pd.read_csv("Data/ksfo_historical.csv", parse_dates=['date'])
         return df
     except Exception as e:
-        st.error(f"⚠️ CSV Error: Make sure your file is at 'data/ksfo_historical.csv'. Details: {e}")
+        st.error(f"⚠️ CSV Error: Make sure your file is at 'Data/ksfo_historical.csv'. Details: {e}")
         return None
 
 df = load_historical()
