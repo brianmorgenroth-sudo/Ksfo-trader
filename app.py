@@ -101,7 +101,7 @@ if df is not None:
     hist_day = df[(df['date'].dt.month == today.month) & (df['date'].dt.day == today.day)]
     
     if not hist_day.empty:
-        prob = len(hist_day[hist_day['TMAX'] >= strike]) / len(hist_day)
+        prob = len(hist_day[hist_day['TMAX'] >= strike-temp]) / len(hist_day)
         edge = prob - price
 
         # BIG METRICS (Easy to read on phone)
