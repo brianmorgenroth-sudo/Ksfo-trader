@@ -12,7 +12,7 @@ st.title("🌁 KSFO Trader")
 def load_data():
     try:
         # Tries to find your CSV in the 'data' folder
-        return pd.read_csv("data/ksfo_historical.csv", parse_dates=['date'])
+        return pd.read_csv("Data/ksfo_historical.csv", parse_dates=['date'])
     except:
         st.error("CSV not found. Please upload one below.")
         return None
